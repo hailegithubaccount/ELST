@@ -9,6 +9,7 @@ export default function HomeLayout() {
       <Stack.Screen name="openPage" />
       <Stack.Screen name="AddMoney" />
       <Stack.Screen name="Atm" />
+      <Stack.Screen name="number" />
       
     
       

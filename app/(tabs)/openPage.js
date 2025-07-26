@@ -88,7 +88,9 @@ const SearchScreen = () => {
           </View>
 
           <View style={styles.withtext}>
-            <TouchableOpacity style={styles.Tabbutton}>
+            <TouchableOpacity 
+            onPress={() => router.push('/number')}
+            style={styles.Tabbutton}>
               <Icon name="ellipsis-h" size={20} color="white" />
             </TouchableOpacity>
             <Text style={styles.text1}>More</Text>
