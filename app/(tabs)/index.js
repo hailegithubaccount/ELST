@@ -69,7 +69,7 @@ const SearchScreen = () => {
       >
          <Icon name="plus" size={20} color="white" style={styles.iconTab} />
       </TouchableOpacity>
-       <Text style={styles.text1}>Personal</Text>
+       <Text style={styles.text1}>Add Money</Text>
       
 
           </View>
@@ -85,7 +85,7 @@ const SearchScreen = () => {
       >
          <Icon name="exchange" size={20} color="white" style={styles.iconTab} />
       </TouchableOpacity>
-       <Text style={styles.text1}>Personal</Text>
+       <Text style={styles.text1}>Move</Text>
       
 
           </View>
@@ -96,7 +96,7 @@ const SearchScreen = () => {
       >
          <Icon name="home" size={20} color="white" style={styles.iconTab} />
       </TouchableOpacity>
-       <Text style={styles.text1}>Personal</Text>
+       <Text style={styles.text1}>Details</Text>
       
 
           </View>
@@ -105,10 +105,10 @@ const SearchScreen = () => {
         style={styles.Tabbutton} 
        
       >
-       <Icon name="ellipsis-v" size={20} color="white" style={styles.iconTab} />
+       <Icon name="ellipsis-h" size={20} color="white" style={styles.iconTab} />
 
       </TouchableOpacity>
-       <Text style={styles.text1}>Personal</Text>
+       <Text style={styles.text1}>more</Text>
       
 
           </View>
@@ -126,31 +126,38 @@ const SearchScreen = () => {
 
 const styles = StyleSheet.create({
  
+// for MIDDLe tab
+ MiddleTab: {
+  flexDirection: 'row',
+  justifyContent: 'space-between',
+  marginHorizontal: 10,
+},
 
-  MiddleTab:{
-    flexDirection:'row',
-     justifyContent:'space-between',
-     marginBottom:70,
-     marginEnd:10,
-     marginStart:10,
-    
-     
+withtext: {
+  flex: 1, 
+  alignItems: 'center',
+},
 
-  },
-  Tabbutton:{
-    backgroundColor: "#696969",
-    alignItems:'center',
-    color:'white',
-   
-    alignContent:'center',
-     justifyContent:'center', 
+Tabbutton: {
+  backgroundColor: 'gray',
+  borderRadius: 30, 
+  width: 55,
+  height: 55,
+  justifyContent: 'center',
+  alignItems: 'center',
+  marginBottom: 5,
+},
 
-alignItems:'center'    ,
-    width: 50,
-    height: 50,
-    borderRadius: 50,
+text1: {
+  fontSize: 12,
+  textAlign: 'center',
+},
 
-  },
+iconTab: {
+ 
+}
+,
+// for header
   backgroundImage: {
     flex: 1,
     width: '100%',
@@ -209,6 +216,7 @@ alignItems:'center'    ,
   icon: {
     marginHorizontal: 8,
   },
+  // for middle text dollar
   firstandsecondtext:{
    
     alignItems:'center',
