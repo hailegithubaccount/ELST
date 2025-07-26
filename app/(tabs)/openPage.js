@@ -53,13 +53,6 @@ const SearchScreen = () => {
             </TouchableOpacity>
 
           </View>
-
-
-
-
-
-
-
         </View>
         {/* the following one is the four middle tab */}
 
@@ -78,17 +71,14 @@ const SearchScreen = () => {
 
           </View>
 
-
-
-
-
           <View style={styles.withtext}>
             <TouchableOpacity
+              // onPress={() => router.push('/Atm')}
               style={styles.Tabbutton}
 
             >
               <Icon name="exchange" size={20} color="white" style={styles.iconTab} />
-            </TouchableOpacity>
+            </TouchableOpacity >
             <Text style={styles.text1}>Move</Text>
 
 
@@ -165,12 +155,7 @@ const SearchScreen = () => {
             <View style={styles.THEleftText}>
               <Text style={{ color: 'white' }}>+US$11.49</Text>
               <Text style={{ color: "rgba(243, 242, 247, 0.5)" }}>-51</Text>
-
-
-
             </View>
-
-
           </View>
 
           {/* ?flag with text in the row the second*/}

@@ -98,14 +98,6 @@ const AddMoney = () => {
           <Text style={{ color: 'white' }}>$20</Text>
           <Text style={{ color: ' "rgba(243, 242, 247, 0.5)"' }}>no fee</Text>
         </View>
-
-
-
-
-
-
-
-
       </View>
 
 
