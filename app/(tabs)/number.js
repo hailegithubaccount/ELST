@@ -1,4 +1,4 @@
-// App.tsx
+
 import React, { useState } from 'react';
 import {
   SafeAreaView,
@@ -9,7 +9,7 @@ import {
   StatusBar,
 } from 'react-native';
 
-const App = () => {
+const number = () => {
   const [amount, setAmount] = useState('50');
   const [spentAmount] = useState('0');
 
@@ -92,6 +92,9 @@ const App = () => {
       </TouchableOpacity>
 
       {/* Numeric Keypad */}
+      {/* <View style={styles.bothKeypadandNumber}>
+
+      </View> */}
       <View style={styles.keypad}>
         {/* Operators Row */}
         <View style={styles.operatorsRow}>
@@ -206,16 +209,18 @@ const styles = StyleSheet.create({
     marginLeft: 2,
   },
   spentText: {
-    color: '#8E8E93',
+    color: 'rgba(142, 142, 147, 1)',
     fontSize: 16,
+    marginBottom:100
   },
   setLimitButton: {
     backgroundColor: '#FFFFFF',
     paddingVertical: 15,
     paddingHorizontal: 40,
     borderRadius: 25,
-    marginHorizontal: 40,
-    marginBottom: 30,
+   
+    
+    marginTop:50
   },
   setLimitText: {
     color: '#000000',
@@ -227,6 +232,9 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingHorizontal: 20,
     paddingBottom: 20,
+    backgroundColor:'#302f2fff',
+    marginTop:15
+    
   },
   operatorsRow: {
     flexDirection: 'row',
@@ -234,9 +242,9 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   operatorButton: {
-    width: 20,
+    width: 25,
     height: 20,
-    backgroundColor: '#1C1C1E',
+    
     borderRadius: 8,
     justifyContent: 'center',
     alignItems: 'center',
@@ -250,7 +258,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'space-between',
-    marginBottom: 20,
+  
   },
   numberButton: {
     width: '30%',
@@ -267,19 +275,17 @@ const styles = StyleSheet.create({
     fontWeight: '600',
   },
   letterText: {
-    color: '#8E8E93',
+    color: '#FFFFFF',
     fontSize: 10,
     marginTop: 2,
   },
   bottomRow: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
+   gap:100,
     alignItems: 'center',
+    marginBottom:30
   },
   decimalButton: {
-    width: 50,
-    height: 50,
-    backgroundColor: '#1C1C1E',
     borderRadius: 25,
     justifyContent: 'center',
     alignItems: 'center',
@@ -290,17 +296,16 @@ const styles = StyleSheet.create({
     fontWeight: '600',
   },
   zeroButton: {
-    width: '60%',
-    height: 60,
-    backgroundColor: '#1C1C1E',
+    width: '30%',
+    height: 40,
+     backgroundColor: '#929295ff',
     borderRadius: 8,
     justifyContent: 'center',
     alignItems: 'center',
   },
   deleteButton: {
-    width: 50,
-    height: 50,
-    backgroundColor: '#1C1C1E',
+   
+   
     borderRadius: 8,
     justifyContent: 'center',
     alignItems: 'center',
@@ -341,4 +346,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+export default number;
