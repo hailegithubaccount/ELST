@@ -7,11 +7,8 @@ export default function HomeLayout() {
       {/* Main Login Screen */}
       <Stack.Screen name="index" />
       
-      {/* Dashboards */}
-      <Stack.Screen name="customerDashboard" />
-      <Stack.Screen name="sellerDashboard" />
-      <Stack.Screen name="deliverDashboard" />
-      <Stack.Screen name="trackDelivery" />
+    
+      
     </Stack>
   );
 }

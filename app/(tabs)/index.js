@@ -1,75 +1,105 @@
-import React, { useState } from "react";
-import { useRouter } from "expo-router";
-import { View, TextInput, Button, Text, Alert, StyleSheet } from "react-native";
+import { View, TextInput, StyleSheet, SafeAreaView, Image, ImageBackground } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
-const LoginForm = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState(""); // State for password
-  const router = useRouter();
-
-  // Predefined email addresses and passwords for role-based navigation
-  const customerEmail = "cu@gmail.com";
-  const customerPassword = "123"; // Add a password for customer
-  const delivererEmail = "de@gmail.com";
-  const delivererPassword = "123"; // Add a password for deliverer
-  const sellerEmail = "se@gmail.com";
-  const sellerPassword = "123"; // Add a password for seller
-
-  const handleLogin = () => {
-    if (email === customerEmail && password === customerPassword) {
-      router.push("/customerDashboard");
-    } else if (email === delivererEmail && password === delivererPassword) {
-      router.push("/deliverDashboard");
-    } else if (email === sellerEmail && password === sellerPassword) {
-      router.push("/sellerDashboard");
-    } else {
-      Alert.alert("Invalid credentials", "Please enter valid email and password.");
-    }
-  };
-
+const SearchScreen = () => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Login</Text>
-      <TextInput
-        style={styles.input}
-        placeholder="Enter your email"
-        value={email}
-        onChangeText={(text) => setEmail(text)}
-        keyboardType="email-address"
-        autoCapitalize="none"
-      />
-      <TextInput
-        style={styles.input}
-        placeholder="Enter your password"
-        value={password}
-        onChangeText={(text) => setPassword(text)}
-        secureTextEntry // Hides the password input
-      />
-      <Button title="Login" onPress={handleLogin} />
-    </View>
+    <ImageBackground
+      source={require('../../assets/images/e.png')} 
+      style={styles.backgroundImage}
+      resizeMode="cover"
+    >
+      <SafeAreaView style={styles.container}>
+        <View style={styles.header}>
+         
+          <View style={styles.profileContainer}>
+            <Image
+              source={require('../../assets/images/image.jpg')}
+              style={styles.profileImage}
+            />
+          </View>
+
+          <View style={styles.searchSection}>
+            <TextInput
+              style={styles.searchInput}
+              placeholder="Search..."
+              placeholderTextColor="#999"
+            />
+          </View>
+
+       
+          <View style={styles.iconsContainer}>
+            <View style={styles.circle}>
+    <Icon name="user" size={20} color="#333" />
+  </View>
+  <View style={styles.circle}>
+    <Icon name="bell" size={20} color="#333" />
+  </View>
+          </View>
+        </View>
+      </SafeAreaView>
+    </ImageBackground>
   );
 };
 
-export default LoginForm;
-
 const styles = StyleSheet.create({
+  backgroundImage: {
+    flex: 1,
+    width: '100%',
+    height: '100%',
+  },
   container: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    padding: 16,
   },
-  title: {
-    fontSize: 24,
-    marginBottom: 20,
+  header: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  
+    paddingHorizontal: 10,
+    paddingVertical: 20,
   },
-  input: {
-    width: "100%",
+  profileContainer: {
+    marginRight: 2,
+    marginLeft: 10,
+  },
+  profileImage: {
+    width: 40,
     height: 40,
+    borderRadius: 20,
+  },
+  searchSection: {
+    flex: 1,
+    marginHorizontal: 10,
+  },
+  searchInput: {
+    height: 40,
+    width:195,
     borderWidth: 1,
-    borderColor: "#ccc",
-    borderRadius: 4,
-    paddingHorizontal: 8,
-    marginBottom: 20,
+    borderColor: 'rgb(248,248,255)',
+    borderRadius: 20,
+    paddingHorizontal: 20,
+    fontSize: 14,
+    backgroundColor: '#f5f5f5', // Ensure input is readable
+  },
+  iconsContainer: {
+    flexDirection: 'row',       // Align icons horizontally
+    justifyContent:'center',  // Center icons inside the circle
+    
+  },
+   circle: {
+    width: 35,                  // Diameter of the circle
+    height: 35, 
+                 // Diameter of the circle
+    borderRadius: 20,           // Half of width/height to make it circular
+    backgroundColor:'#fff',    // Background color (white)
+    justifyContent: 'center',   // Center icon vertically
+    alignItems: 'center',       // Center icon horizontally
+    borderWidth: 1,             // Optional border
+    borderColor: '#ddd',        // Light gray border
+                // Android shadow
+  },
+  icon: {
+    marginHorizontal: 8,
   },
 });
+
+export default SearchScreen;
