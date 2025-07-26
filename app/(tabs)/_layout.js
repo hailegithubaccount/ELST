@@ -6,6 +6,7 @@ export default function HomeLayout() {
     <Stack screenOptions={{ headerShown: false }}>
       {/* Main Login Screen */}
       <Stack.Screen name="index" />
+       <Stack.Screen name="openPage" />
       
     
       
