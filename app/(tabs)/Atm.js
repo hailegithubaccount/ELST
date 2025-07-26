@@ -5,147 +5,114 @@ import {
   StyleSheet,
   SafeAreaView,
   Image,
-  ImageBackground,
   TouchableOpacity,
-  Text
+  Text,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 const Atm = () => {
   const router = useRouter();
+
   return (
-    <ImageBackground
-      source={require('../../assets/images/s.png')}
-      style={styles.backgroundImage}
-      resizeMode="cover"
-    >
-      <SafeAreaView style={styles.container}>
-        <TouchableOpacity
-          onPress={() => router.push('/openPage')}
+    <View style={styles.container}>
+      {/* Back button */}
+      <TouchableOpacity onPress={() => router.push('/openPage')} style={styles.backButton}>
+        <Icon name="arrow-left" size={20} color="white" />
+      </TouchableOpacity>
 
-          style={styles.backButton}>
-          <Icon name="arrow-left" size={20} color="white" />
-        </TouchableOpacity>
-        <View style={styles.atmContainer}>
-          <Image
-            source={require('../../assets/images/atm2.png')}
-            style={styles.atmImage}
-          />
-        </View>
-        <View style={{
-          marginTop: 30,
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}>
-          <Text style={styles.mainText}>
-            Permium :space Gray
+      {/* ATM Image */}
+      <View style={styles.cardContainer}>
+        <Image
+          source={require('../../assets/images/atm3.png')}
+          style={styles.cardImage}
+        />
+      </View>
 
-          </Text>
-          <Text style={styles.TitleText}>
-            made from plastic  with stream shimmer effect our beautifly permium crad feels as good as it looks
+      {/* Texts */}
+      <View style={styles.textSection}>
+        <Text style={styles.mainTitle}>Premium · Space Grey</Text>
+        <Text style={styles.subText}>
+          Made from plastic with a striking shimmer effect, our beautiful Premium card feels as good as it looks.
+        </Text>
+      </View>
 
-          </Text>
-        </View>
+      {/* Color Options */}
+      <View style={styles.colorOptions}>
+        <View style={[styles.colorCircle, { backgroundColor: '#3a3a3a' }]} />
+        <View style={[styles.colorCircle, { backgroundColor: '#f2caca' }]} />
+        <View style={[styles.colorCircle, { backgroundColor: '#aba9dc' }]} />
+      </View>
 
-        <View style={styles.Boxes}>
-          <View style={[styles.box]}>
-
-
-          </View>
-          <View style={styles.box}>
-
-          </View>
-          <View style={styles.box}>
-
-          </View>
-
-        </View>
-
-        <View style={styles.button}>
-          <TouchableOpacity
-          onPress={() => router.push('/openPage')}
-          >
-   <Text>Get card for free</Text>
-          </TouchableOpacity>
-          
-        </View>
-
-
-
-
-      </SafeAreaView>
-    </ImageBackground>
+      {/* Button */}
+      <TouchableOpacity style={styles.ctaButton} onPress={() => router.push('/openPage')}>
+        <Text style={styles.ctaButtonText}>Get card for free</Text>
+      </TouchableOpacity>
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
-  button: {
-    marginTop: 40,
-    width: 300,
-    height: 50,
-    backgroundColor: 'white',
-    borderRadius: 30,
-    alignContent: 'center',
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
-
-
-  Boxes: {
-    flexDirection: 'row',
-    gap: 30,
-    marginTop: 50,
-    marginLeft: 100,
-  },
-  box: {
-    width: 50,
-    height: 50,
-    borderColor: "red",
-    borderRadius: 50,
-    backgroundColor: 'gray'
-
-
-  },
-
-  mainText: {
-    color: 'white',
-
-
-  },
-
-  TitleText: {
-    color: "rgba(243, 242, 247, 0.5)",
-  },
-
-
-
-  backgroundImage: {
-    flex: 1,
-    width: '100%',
-    height: '100%',
-  },
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'flex-start',
+    backgroundColor: '#000012',
+    paddingTop: 50,
+    paddingHorizontal: 20,
   },
   backButton: {
-    marginTop: 30,
-    alignSelf: 'flex-start',
-    marginLeft: 30,
+    position: 'absolute',
+    top: 50,
+    left: 20,
+    zIndex: 2,
   },
-  atmContainer: {
-    width: '90%',
-    height: 300,
-    marginTop: 40,
-    alignItems: 'center',
+  cardContainer: {
+    marginTop: 100,   // moved image down a bit
+    height: 260,      // increased height for bigger image
     justifyContent: 'center',
+    alignItems: 'center',
   },
-  atmImage: {
-    width: '100%',
+  cardImage: {
+    width: '95%',    // larger width
     height: '100%',
     resizeMode: 'contain',
-    opacity: 0.7,
+  },
+  textSection: {
+    marginTop: 30,
+    alignItems: 'center',
+    paddingHorizontal: 10,
+  },
+  mainTitle: {
+    color: 'white',
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
+  subText: {
+    color: '#b8b8d1',
+    fontSize: 14,
+    textAlign: 'center',
+    marginTop: 10,
+  },
+  colorOptions: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    marginTop: 30,
+    gap: 20,
+  },
+  colorCircle: {
+    width: 40,
+    height: 40,
+    borderRadius: 20,
+  },
+  ctaButton: {
+    backgroundColor: 'white',
+    paddingVertical: 14,
+    borderRadius: 30,
+    marginTop: 40,
+    alignItems: 'center',
+    marginHorizontal: 40,
+  },
+  ctaButtonText: {
+    fontWeight: '600',
+    fontSize: 16,
   },
 });
 
