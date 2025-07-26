@@ -115,6 +115,51 @@ const SearchScreen = () => {
           
 </View>
 
+{/* the follwing one is the bigbox */}
+
+
+<View style={styles.Bigbox}>
+  <View style={styles.flagwithText}>
+   <View style={{ width: 120, height: 120 }}>
+  <Image
+    source={require('../../assets/images/America.png')}
+    style={{
+      width: 30,
+      height: 30,
+      borderRadius: 50,
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      zIndex: 1,
+    }}
+  />
+
+  <Image
+    source={require('../../assets/images/Engliand.png')}
+    style={{
+      width: 30,
+      height: 30,
+      borderRadius:30,
+      position: 'absolute',
+      top: 10,
+      left: 10,
+      zIndex: 0,
+      opacity: 0.7, // optional transparency
+    }}
+  />
+</View>
+<View style={styles.flagtext}>
+  <Text style={styles.flagtext1}>SGD-USD</Text>
+  <Text style={styles.flagtext2}>Today,23:23</Text>
+
+</View>
+
+  </View>
+
+
+
+</View>
+
 
 
 
@@ -125,12 +170,35 @@ const SearchScreen = () => {
 };
 
 const styles = StyleSheet.create({
+
+  //for big box
+ Bigbox: {
+  width: 300,
+  height: 200,
+  margin:20,
+ 
+  borderColor: 'red',
+  borderWidth: 2 // Add this if you want the border to appear
+},
+flagwithText:{
+  flexDirection:'row'
+
+},
+flagtext2:{
+  color:'white'
+
+},
+flagtext1:{
+  color:'white'
+
+},
  
 // for MIDDLe tab
  MiddleTab: {
   flexDirection: 'row',
   justifyContent: 'space-between',
   marginHorizontal: 10,
+  marginBottom:30,
 },
 
 withtext: {
