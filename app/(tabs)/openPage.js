@@ -7,7 +7,7 @@ const SearchScreen = () => {
   const router = useRouter();
   return (
     <ImageBackground
-      source={require('../../assets/images/s.png')}
+      source={require('../../assets/images/s.png')}     
       style={styles.backgroundImage}
       resizeMode="cover"
     >
@@ -158,7 +158,7 @@ const SearchScreen = () => {
             </View>
           </View>
 
-          {/* ?flag with text in the row the second*/}
+          {/* flag with text in the row the second*/}
           <View style={styles.mainRow}>
             <View style={styles.flagwithText}>
               <View style={styles.flag}>
