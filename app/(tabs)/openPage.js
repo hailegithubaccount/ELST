@@ -138,7 +138,7 @@ const SearchScreen = () => {
                   />
                 </View>
                 <View style={styles.flagtext}>
-                  <Text style={styles.flagtext1}>SGD - USD</Text>
+                  <Text style={styles.flagtext1}>SGD -> USD</Text>
                   <Text style={styles.flagtext2}>Today, 23:23</Text>
                 </View>
               </View>
@@ -290,7 +290,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderWidth: 1,
-    borderColor: '#ddd',
+    borderColor: 'rgba(255, 255, 255, 0.7)',
   },
   icon: {
     marginHorizontal: 8,
@@ -312,7 +312,7 @@ const styles = StyleSheet.create({
     fontSize: 25,
   },
   button: {
-    backgroundColor: "#696969",
+    backgroundColor: "rgba(124, 116, 116, 0.7)",
     padding: 10,
     borderRadius: 50,
     minWidth: 100,

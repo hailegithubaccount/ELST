@@ -65,13 +65,13 @@ const styles = StyleSheet.create({
     zIndex: 2,
   },
   cardContainer: {
-    marginTop: 100,   // moved image down a bit
-    height: 260,      // increased height for bigger image
+    marginTop: 50,
+    height: 350,
     justifyContent: 'center',
     alignItems: 'center',
   },
   cardImage: {
-    width: '95%',    // larger width
+    width: '100%',
     height: '100%',
     resizeMode: 'contain',
   },
@@ -106,7 +106,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     paddingVertical: 14,
     borderRadius: 30,
-    marginTop: 40,
+    marginTop: 20,
     alignItems: 'center',
     marginHorizontal: 40,
   },

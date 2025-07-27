@@ -40,7 +40,8 @@ const AddMoney = () => {
       <View style={styles.box}>
 
         <View style={styles.circle}>
-          <Icon name="calendar" size={20} color="blue" />
+          <Icon name="credit-card" size={20} color="rgba(0, 0, 255, 0.5)
+" />
 
         </View>
 
@@ -81,7 +82,8 @@ const AddMoney = () => {
               }}
             />
             <Text style={{ color: 'white', marginLeft: 30 }}>
-              +SGd
+              SGd  
+               <Icon name=  'chevron-down'size={13} color="white" />
             </Text>
 
           </View>
@@ -95,8 +97,8 @@ const AddMoney = () => {
 
         </View>
         <View style={{ marginRight: 15 }}>
-          <Text style={{ color: 'white' }}>$20</Text>
-          <Text style={{ color: ' "rgba(243, 242, 247, 0.5)"' }}>no fee</Text>
+          <Text style={{ color: 'white',fontWeight:'bold',fontSize:20 }}>$20</Text>
+          <Text style={{ color: ' "rgba(243, 242, 247, 0.5)"' }}>No fee</Text>
         </View>
       </View>
 
@@ -125,10 +127,12 @@ const styles = StyleSheet.create({
   button: {
     backgroundColor: "gray",
     width: 100,
-    height: 50,
+    height: 40,
     borderRadius: 24,
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+     marginRight:20
+
 
 
 
@@ -139,6 +143,7 @@ const styles = StyleSheet.create({
     color: '#D3D3D3',
     fontSize: 18,
     fontWeight: 'bold',
+   
 
 
 
@@ -150,7 +155,7 @@ const styles = StyleSheet.create({
 
     flexDirection: 'row',
     justifyContent: 'space-between',
-    backgroundColor: '#2c2a2aff',
+    backgroundColor: '#171515ff',
     marginHorizontal: 20,
     marginBottom: 20,
     borderRadius: 20,
