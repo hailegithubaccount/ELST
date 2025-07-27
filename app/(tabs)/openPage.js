@@ -30,20 +30,28 @@ const SearchScreen = () => {
             />
           </View>
 
-          <View style={styles.searchSection}>
-            <TextInput
-              style={styles.searchInput}
-              placeholder="Search..."
-              placeholderTextColor="#999"
-            />
-          </View>
+         <View style={styles.searchSection}>
+  <View style={styles.searchInputContainer}>
+    <Icon 
+      name="search" 
+      size={16} 
+      color="white" 
+      style={styles.searchIcon} 
+    />
+    <TextInput
+      style={styles.searchInput}
+      placeholder="Search..."
+        placeholderTextColor="white"
+    />
+  </View>
+</View>
 
           <View style={styles.iconsContainer}>
             <View style={styles.circle}>
-              <Icon name="bar-chart" size={20} color="#333" />
+              <Icon name="bar-chart" size={20} color="white" />
             </View>
             <View style={styles.circle}>
-              <Icon name="calendar" size={20} color="#333" />
+              <Icon name="credit-card" size={20} color="white" />
             </View>
           </View>
         </View>
@@ -167,12 +175,7 @@ const SearchScreen = () => {
   );
 };
 
-
-
-
 const styles = StyleSheet.create({
-
-  //for big box
   Bigbox: {
     width: 300,
     height: 200,
@@ -180,10 +183,8 @@ const styles = StyleSheet.create({
     borderRadius: 30,
     borderWidth: 2,
     backgroundColor: 'rgba(37, 36, 42, 0.5)',
-    // Add this if you want the border to appear
   },
   mainRow: {
-
     flexDirection: 'row',
     gap: 70,
     marginTop: 20,
@@ -191,43 +192,29 @@ const styles = StyleSheet.create({
   },
   THeLEftText: {
     color: 'white'
-
   },
   flagwithText: {
     flexDirection: 'row',
     gap: 50,
     marginLeft: 30,
-
-
   },
   flagtext2: {
     color: 'rgba(243, 242, 247, 0.5)',
     fontSize: 11,
-
   },
   flagtext1: {
     color: 'white',
-
-
   },
-
-
-
-
-
-  // for MIDDLe tab
   MiddleTab: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     marginHorizontal: 10,
     marginBottom: 1
   },
-
   withtext: {
     flex: 1,
     alignItems: 'center',
   },
-
   Tabbutton: {
     backgroundColor: 'gray',
     borderRadius: 30,
@@ -237,17 +224,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginBottom: 5,
   },
-
   text1: {
     fontSize: 12,
     textAlign: 'center',
   },
-
   iconTab: {
-
-  }
-  ,
-  // for header
+  },
   backgroundImage: {
     flex: 1,
     width: '100%',
@@ -259,7 +241,6 @@ const styles = StyleSheet.create({
   header: {
     flexDirection: 'row',
     alignItems: 'center',
-
     paddingHorizontal: 10,
     paddingVertical: 20,
   },
@@ -276,60 +257,59 @@ const styles = StyleSheet.create({
     flex: 1,
     marginHorizontal: 10,
   },
-  searchInput: {
+  searchInputContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
     height: 40,
     width: 195,
     borderWidth: 1,
-    borderColor: 'rgb(248,248,255)',
+       borderColor: '#ddd',
     borderRadius: 20,
-    paddingHorizontal: 20,
+    backgroundColor: 'rgba(255, 255, 255, 0.7)',
+  },
+  searchIcon: {
+    marginLeft: 15,
+    marginRight: 10,
+  },
+  searchInput: {
+    flex: 1,
     fontSize: 14,
-    backgroundColor: '#f5f5f5', // Ensure input is readable
+    color:"white"
+    
   },
   iconsContainer: {
-    flexDirection: 'row',       // Align icons horizontally
+    flexDirection: 'row',
     justifyContent: 'center',
-    gap: 8  // Center icons inside the circle
-
+    gap: 8
   },
   circle: {
-    width: 35,                  // Diameter of the circle
+    width: 35,
     height: 35,
-    // Diameter of the circle
-    borderRadius: 20,           // Half of width/height to make it circular
-    backgroundColor: '#fff',    // Background color (white)
-    justifyContent: 'center',   // Center icon vertically
-    alignItems: 'center',       // Center icon horizontally
-    borderWidth: 1,             // Optional border
-    borderColor: '#ddd',        // Light gray border
-    // Android shadow
+    borderRadius: 20,
+    backgroundColor: 'rgba(255, 255, 255, 0.7)',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderWidth: 1,
+    borderColor: '#ddd',
   },
   icon: {
     marginHorizontal: 8,
   },
-  // for middle text dollar
   firstandsecondtext: {
-
     alignItems: 'center',
     justifyContent: 'center',
     marginTop: 50,
-
-
   },
   text1: {
     color: 'white',
     fontSize: 15,
-
   },
   text2: {
     color: 'white',
     fontSize: 50,
-
-
   },
   smallText: {
     fontSize: 25,
-
   },
   button: {
     backgroundColor: "#696969",
@@ -343,12 +323,11 @@ const styles = StyleSheet.create({
     color: '#D3D3D3',
     fontSize: 18,
     fontWeight: 'bold',
-
   },
-    bottomTab: {
+  bottomTab: {
     flexDirection: 'row',
     justifyContent: 'space-around',
-    backgroundColor: 'rgba(30, 30, 30, 0.9)',  // Darker bottom bar
+    backgroundColor: 'rgba(30, 30, 30, 0.9)',
     paddingVertical: 10,
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
@@ -364,9 +343,6 @@ const styles = StyleSheet.create({
     fontSize: 12,
     marginTop: 4,
   },
-
-
-
 });
 
 export default SearchScreen;
